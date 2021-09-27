@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap");
+/* base styles */
+* {
+  margin: 0;
+  font-family: "Nunito";
+  color: rgba(0, 0, 0, 0.815);
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.logo {
+}
+.hamburger-toggle {
+  cursor: pointer;
+  display: none;
+}
+.navbar {
+  min-height: 8vh;
+  width: 80vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  font-family: "Nunito";
+  background-color: green;
+  color: rgba(0, 0, 0, 0.815);
+}
+.navbar a {
+  text-decoration: none;
+  padding: 0px 20px;
+  color: rgba(0, 0, 0, 0.815);
+  padding: 0px 20px;
+  font-size: 18px;
+}
+
+.menulink {
+  color: rgba(0, 0, 0, 0.815);
+  padding: 0px 20px;
+  font-size: 28px;
+  width: 100%;
+}
+
+.apply {
+  background-color: #01bbe8;
+  height: 48px;
+  text-align: center;
+  color: white;
+  width: auto;
+  padding: 0 30px;
+  z-index: 2;
+  opacity: 1;
+  border: transparent;
+  -webkit-border-radius: 30px;
+}
+.apply a {
+  color: white;
+}
+
+@media screen and (max-width: 1150px) {
+  body {
+    overflow-x: hidden;
+  }
+  .hamburger-toggle {
+    display: block;
+  }
+  .menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    align-items: center;
+    width: 30%;
+    top: 8vh;
+    background-color: gray;
+    transition: 0.3s;
+    right: -500px;
+    z-index: 99;
+  }
+  .active {
+    right: 0px;
+    transition: 0.3s;
+  }
+  .inactive {
+    right: 500px;
+    transition: 0.3s;
+  }
+  .navbar a {
+    font-size: 32px;
+  }
+}
